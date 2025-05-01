@@ -1,0 +1,13 @@
+diff --git a/src/DMR/constants.h b/src/DMR/constants.h
+index ae08631..7acb075 100644
+--- a/src/DMR/constants.h
++++ b/src/DMR/constants.h
+@@ -4,6 +4,8 @@
+ #include <gnuradio/gr_complex.h>
+ #include "src/MMDVM/DMRDefines.h"
+
++#include <cstdint>
++
+ const uint64_t MS_DATA_SYNC_BITS  = 0xD5D7F77FD757U;
+ const uint64_t MS_VOICE_SYNC_BITS = 0x7F7D5DD57DFDU;
+ const uint64_t BS_DATA_SYNC_BITS  = 0xDFF57D75DF5DU;

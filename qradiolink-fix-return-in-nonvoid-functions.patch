@@ -1,0 +1,35 @@
+diff -up qradiolink/src/gr/limesdr/common/device_handler.cc.cccc qradiolink/src/gr/limesdr/common/device_handler.cc
+--- qradiolink/src/gr/limesdr/common/device_handler.cc.cccc	2022-11-26 15:49:27.632990534 +0100
++++ qradiolink/src/gr/limesdr/common/device_handler.cc	2022-11-26 15:53:57.751246167 +0100
+@@ -346,6 +346,7 @@ double device_handler::set_rf_freq(int d
+         std::cout << "ERROR: device_handler::set_rf_freq(): rf_freq must be more than 0 Hz."
+                   << std::endl;
+         close_all_devices();
++        return 0;
+     } else {
+         std::cout << "INFO: device_handler::set_rf_freq(): ";
+         if (LMS_SetLOFrequency(device_handler::getInstance().get_device(device_number),
+@@ -432,6 +433,7 @@ double device_handler::set_analog_filter
+         std::cout << "ERROR: device_handler::set_analog_filter(): channel must be 0 or 1."
+                   << std::endl;
+         close_all_devices();
++        return 0;
+     }
+ }
+
+@@ -465,6 +467,7 @@ double device_handler::set_digital_filte
+         std::cout << "ERROR: device_handler::set_digital_filter(): channel must be 0 or 1."
+                   << std::endl;
+         close_all_devices();
++        return 0;
+     }
+ }
+
+@@ -489,6 +492,7 @@ device_handler::set_gain(int device_numb
+         std::cout << "ERROR: device_handler::set_gain(): valid gain range [0, 73] "
+                   << std::endl;
+         close_all_devices();
++        return 0;
+     }
+ }
+

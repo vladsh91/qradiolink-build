@@ -1,0 +1,13 @@
+diff --git a/qradiolink.pro b/qradiolink.pro
+index ed4a480..dc18f2a 100644
+--- a/qradiolink.pro
++++ b/qradiolink.pro
+@@ -41,6 +41,8 @@ CONFIG(qtaudio) {
+     LIBS += -lpulse-simple -lpulse
+ }
+
++DEFINES += SPDLOG_FMT_EXTERNAL
++
+ SOURCES += src/main.cpp\
+     src/DMR/dmrcontrol.cpp \
+     src/DMR/dmrtiming.cpp \
